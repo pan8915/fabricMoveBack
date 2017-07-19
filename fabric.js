@@ -59,8 +59,7 @@ $(document).ready(function() {
     if (mouseX > this.X && mouseX < this.X+this.W && mouseY > this.Y && mouseY < this.Y+this.H) {
       var img = new Image();
       img.src = this.image;
-      f.drawImage(img, this.X, this.Y, this.W+350, this.H+350);
-      f.strokeRect(this.X, this.Y, this.W+350, this.H+350);
+      f.drawImage(img, this.X, this.Y, this.W+300, this.H+300);
     } else {
 
       if (this.X < 0 || this.X + this.W > field.width || this.Y  < 0 || this.Y + this.H > field.height) {
@@ -68,7 +67,7 @@ $(document).ready(function() {
         this.SY = -this.SY;
 
         // this.Reset();
-      } 
+      }
       this.X += this.SX;
       this.Y += this.SY;
 
