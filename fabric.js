@@ -31,16 +31,16 @@ $(document).ready(function() {
   }, false);
 
   function Fabric(image) {
-    this.X = field.width / 2 + Math.random() * 300;
-    this.Y = field.height / 2 + Math.random() * 300;
+    this.X = field.width / 2;
+    this.Y = field.height / 2;
 
     this.SX = Math.random() * 10 - 5;
     this.SY = Math.random() * 10 - 5;
 
     var start = 0;
 
-    this.W = 120;
-    this.H = 120;
+    this.W = 100;
+    this.H = 100;
 
     this.image = image;
 
@@ -105,5 +105,5 @@ $(document).ready(function() {
 
   initFabrics();
 
-  setInterval(drawScreen, 100);
+  setInterval(drawScreen, 10);
 });
