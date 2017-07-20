@@ -61,16 +61,14 @@ $(document).ready(function() {
       img.src = this.image;
       f.drawImage(img, this.X, this.Y, this.W+250, this.H+250);
     } else {
+      this.X += this.SX;
+      this.Y += this.SY;
 
       if (this.X < 0 || this.X + this.W > field.width || this.Y  < 0 || this.Y + this.H > field.height) {
         this.SX = -this.SX;
         this.SY = -this.SY;
-
         // this.Reset();
       }
-      this.X += this.SX;
-      this.Y += this.SY;
-
       var img = new Image();
       img.src = this.image;
       console.log(this.X + ":::" + this.Y);
@@ -105,5 +103,5 @@ $(document).ready(function() {
 
   initFabrics();
 
-  setInterval(drawScreen, 10);
+  setInterval(drawScreen, 60);
 });
